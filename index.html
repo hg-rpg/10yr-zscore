@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+	<head>
+		<title>HGRPG: Ratmas 2018 Tribute Rankings</title>
+		<meta charset= "UTF-8">
+		<!-- Bootstrap; ensure proper rendering & touch zooming-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+
+		<!-- Include Stylesheets -->
+		<link href="css/main.css" rel="stylesheet"/>
+
+		<!-- Include the AngularJS library -->
+		<script src="lib/angular.min.js"></script>
+	</head>
+	<body ng-app="zscoreApp">
+		<div class="container" ng-controller="fullScoreController">
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">Rank</th>
+						<th scope="col">Percentile</th>
+						<th scope="col">Name</th>
+						<th scope="col">District</th>
+						<th scope="col">Games Num.</th>
+						<th scope="col">Member</th>
+						<th scope="col">Placement</th>
+						<th scope="col">Death Day</th>
+						<th scope="col">Training Score</th>
+						<th scope="col">Num. Kills</th>
+						<th scope="col">Z-Score</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="t in list">
+						<td>{{ t.rank }}</td>
+						<td>{{ t.percentile }}</td>
+						<td>{{ t.name }}</td>
+						<td>{{ t.district | uppercase}}</td>
+						<td>{{ t.gameNum }}</td>
+						<td>{{ t.member }}</td>
+						<td>{{ t.placement }}</td>
+						<td>{{ t.deathDay }}</td>
+						<td>{{ t.tScore }}</td>
+						<td>{{ t.kills }}</td>
+						<td>{{ t.zscore }}</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+
+	<!-- Modules -->
+	<script src="js/app.js"></script>
+	<!-- Controllers -->
+	<script src="js/controllers/fullScoreController.js"></script>
+	<!-- Services -->
+	<!-- Directives -->
+		
+	</body>
+
+
+
+</html>
