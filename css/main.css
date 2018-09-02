@@ -1,7 +1,38 @@
+.museum{
+	font-family: 'Lora';
+	margin-bottom: 0px;
+	color: #999;
+}
+
+h1{
+	font-family: 'Rubik Mono One';
+	margin: auto;
+	letter-spacing: -2px;
+}
+
+h3{
+	margin-top: 0px;
+	font-family: 'Overpass Mono';
+}
+
 table{
-	font-family: 'Open Sans';
+	font-family: 'Overpass Mono';
+}
+
+.jumbotron{
+	text-align: center;
 }
 
 .callOut{
 	font-weight: 700;
+}
+
+.subOut{
+	font-weight: 200;
+	color: #999;
+}
+
+.module{
+	background-color: #bbb;
+	border-radius: 3px;
 }
