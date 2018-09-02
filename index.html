@@ -5,35 +5,57 @@
 		<meta charset= "UTF-8">
 		<!-- Bootstrap; ensure proper rendering & touch zooming-->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+		<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" red="stylesheet"/>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+
 
 		<!-- Include Stylesheets -->
 		<link href="css/main.css" rel="stylesheet"/>
+		<link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/css?family=Overpass+Mono|Roboto" rel="stylesheet">
+		
 
 		<!-- Include the AngularJS library -->
 		<script src="lib/angular.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+		<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function() {
+	    	$('.listTable').DataTable({
+	    		"lengthMenu": [[ 50, 100, 200, -1],[ 50, 100, 200, "All"]]
+	    	});
+			} );
+		</script>
+
 	</head>
 	<body ng-app="zscoreApp">
 		<div class="container" ng-controller="fullScoreController">
-			<table class="table">
-				<thead>
+
+			<div class="col-xs-4">TEDDY URSA</div>
+			<div class="col-xs-4">TEDDY URSA</div>
+			<div class="col-xs-4">TEDDY URSA</div>
+
+
+			<table class="table table-striped listTable">
+				<thead class="thead-dark">
 					<tr>
 						<th scope="col">Rank</th>
-						<th scope="col">Percentile</th>
+						<th scope="col">%</th>
 						<th scope="col">Name</th>
 						<th scope="col">District</th>
-						<th scope="col">Games Num.</th>
+						<th scope="col">Games #</th>
 						<th scope="col">Member</th>
 						<th scope="col">Placement</th>
 						<th scope="col">Death Day</th>
 						<th scope="col">Training Score</th>
-						<th scope="col">Num. Kills</th>
+						<th scope="col"># Kills</th>
 						<th scope="col">Z-Score</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr ng-repeat="t in list">
-						<td>{{ t.rank }}</td>
+						<td class="callOut">{{ t.rank }}</td>
 						<td>{{ t.percentile }}</td>
 						<td>{{ t.name }}</td>
 						<td>{{ t.district | uppercase}}</td>

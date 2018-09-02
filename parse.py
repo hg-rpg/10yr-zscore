@@ -1,5 +1,11 @@
 def gamesSuffix(g):
-	if int(g)%10 == 1:
+	if g == "Victor":
+		return "Victor"
+
+
+	if int(g) == 11 or int(g) == 12 or int(g) == 13:
+		h = str(g) + 'th'
+	elif int(g)%10 == 1:
 		h = str(g) + 'st'
 	elif int(g)%10 == 2:
 		h = str(g) + 'nd'
