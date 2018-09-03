@@ -30,28 +30,28 @@ if __name__ == "__main__":
 		rank = i[0]
 		percentile = i[1]
 		name = i[2]
-		gameNum = gamesSuffix(i[3])
+		gameNum = i[3]
 		gameDays = i[4]
 		district = i[5]
 		member = i[6]
 		deathDay = i[7]
-		placement = gamesSuffix(i[8])
+		placement = i[8]
 		tScore = i[9]
 		kills = i[10]
 		zscore = i[11]
 
-		wopen.write('\t\t\trank: "' + rank + '",\n')
-		wopen.write('\t\t\tpercentile: "' + percentile + '",\n') 
+		wopen.write('\t\t\trank: ' + rank + ',\n')
+		wopen.write('\t\t\tpercentile: ' + percentile + ',\n') 
 		wopen.write('\t\t\tname: "' + name + '",\n') 
-		wopen.write('\t\t\tgameNum: "' + gameNum + '",\n') 
+		wopen.write('\t\t\tgameNum: ' + gameNum + ',\n') 
 		wopen.write('\t\t\tgameDays: "' + gameDays + '",\n')
 		wopen.write('\t\t\tdistrict: "' + district + '",\n')
 		wopen.write('\t\t\tmember: "' +  member + '",\n') 
 		wopen.write('\t\t\tdeathDay: "' + deathDay + '",\n')
 		wopen.write('\t\t\tplacement: "' + placement + '",\n')
-		wopen.write('\t\t\ttScore: "' + tScore + '",\n') 
-		wopen.write('\t\t\tkills: "' + kills + '",\n') 
-		wopen.write('\t\t\tzscore: "' + zscore + '"\n')
+		wopen.write('\t\t\ttScore: ' + tScore + ',\n') 
+		wopen.write('\t\t\tkills: ' + kills + ',\n') 
+		wopen.write('\t\t\tzscore: ' + zscore + '\n')
 
 		if rank == str(628):
 			wopen.write('\t\t}\n')

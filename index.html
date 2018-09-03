@@ -1,28 +1,70 @@
 <!doctype html>
 <html>
 	<head>
-		<title>HGRPG: Ratmas 2018 Tribute Rankings</title>
 		<meta charset= "UTF-8">
+		<title>HGRPG: Ratmas 2018 Tribute Rankings</title>
+		
 		<!-- Bootstrap; ensure proper rendering & touch zooming-->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" red="stylesheet"/>
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+		
+		<link rel="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css" red="stylesheet"/>
+		<link rel="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" red="stylesheet"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+
 
 
 		<!-- Include Stylesheets -->
 		<link href="css/main.css" rel="stylesheet"/>
-		<link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css" rel="stylesheet"/>
-		<link href="https://fonts.googleapis.com/css?family=Overpass+Mono|Rubik+Mono+One|Lora" rel="stylesheet">
+
+		<link href="https://fonts.googleapis.com/css?family=Overpass+Mono|Rubik+Mono+One|Lora|Open+Sans" rel="stylesheet">
 		
 
 		<!-- Include the AngularJS library -->
 		<script src="lib/angular.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 		<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-		<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+		<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 		<script>
+
+			$.fn.dataTable.ext.type.order["tribOrder"] = function ( d ) {
+		    switch (d.toUpperCase()) {
+		      case 'D1F': return 1;
+		      case 'D1M': return 2;
+		      case 'D2F': return 3;
+		      case 'D2M': return 4;
+		      case 'D3F': return 5;
+		      case 'D3M': return 6;
+		      case 'D4F': return 7;
+		      case 'D4M': return 8;
+		      case 'D5F': return 9;
+		      case 'D5M': return 10;
+		      case 'D6F': return 11;
+		      case 'D6M': return 12;
+		      case 'D7F': return 13;
+		      case 'D7M': return 14;
+		      case 'D8F': return 15;
+		      case 'D8M': return 16;
+		      case 'D9F': return 17;
+		      case 'D9M': return 18;
+		      case 'D10F': return 19;
+		      case 'D10M': return 20;
+		      case 'D11F': return 21;
+		      case 'D11M': return 22;
+		      case 'D12F': return 23;
+		      case 'D12M': return 24;
+		    }
+		    return 0;
+			};
+
 			$(document).ready(function() {
 	    	$('.listTable').DataTable({
+	    		"columnDefs":[{
+	    			"type": "tribOrder",
+	    			"targets": [3]
+	    		}],
 	    		"lengthMenu": [[ 50, 100, 200, -1],[ 50, 100, 200, "All"]]
 	    	});
 			} );
@@ -30,18 +72,78 @@
 
 	</head>
 	<body ng-app="zscoreApp">
-		<header class="jumbotron">
+		<header class="jumbotron bg-dark">
 			<h4 class="museum">THE NATIONAL HUNGER GAMES MUSEUM PRESENTS:</H4>
 			<h1>VICTORIE</h1>
-			<h3>A System and 25-Year Retrospective</h3>
+			<h3>A 25-Year Retrospective</h3>
 		</header>
-		<div class="container" ng-controller="fullScoreController">
-			<div class="col-xs-2 module">TEDDY URSA</div>
-			<div class="col-xs-2 module">TEDDY URSA</div>
-			<div class="col-xs-2 module">TEDDY URSA</div>
+		<div class="container bg-dark" style="text-align: center">
+			<h2>Our Best</h2>
+			<h3>By District</h3>
+				<table class="table snack" style="width:100%;">
+					<tbody>
+						<tr>
+							<td><span class="snackA">1F</span></br>
+									<span class="snackB">Dru</br>Charlesburg</span></td>
+							<td><span class="snackA">1M</span></br>
+									<span class="snackB">Reyes</br>Moreno</span></td>
+							<td><span class="snackA">2F</span></br>
+									<span class="snackB">Circe</br>Lyon</span></td>
+							<td><span class="snackA">2M</span></br>
+									<span class="snackB">Orion</br>Hammerfell</span></td>
+							<td><span class="snackA">3F</span></br>
+									<span class="snackB">Kiena</br>Ward</span></td>
+							<td><span class="snackA">3M</span></br>
+									<span class="snackB">Sawyer</br>Monaghan</span></td>
+							<td><span class="snackA">4F</span></br>
+									<span class="snackB">River</br>Destin</span></td>
+							<td><span class="snackA">4M</span></br>
+									<span class="snackB">Fitz</br>Ripley</span></td>
+						</tr>
+						<tr>
+							<td><span class="snackA">5F</span></br>
+									<span class="snackB">Laila</br>Sycamore</span></td>
+							<td><span class="snackA">5M</span></br>
+									<span class="snackB">Storm</br>Wie</span></td>
+							<td><span class="snackA">6F</span></br>
+									<span class="snackB">Gypsy</br>Keeni</span></td>
+							<td><span class="snackA">6M</span></br>
+									<span class="snackB">Ansel</br>Khiev</span></td>
+							<td><span class="snackA">7F</span></br>
+									<span class="snackB">Yaa</br>Valarro</span></td>
+							<td><span class="snackA">7M</span></br>
+									<span class="snackB">Alexander</br>Hood</span></td>
+							<td><span class="snackA">8F</span></br>
+									<span class="snackB">Aria</br>Wolfe</span></td>
+							<td><span class="snackA">8M</span></br>
+									<span class="snackB">Jared</br>Strahan</span></td>
+						</tr>
+						<tr>
+							<td><span class="snackA">9F</span></br>
+									<span class="snackB">Ivy</br>Soren</span></td>
+							<td><span class="snackA">9M</span></br>
+									<span class="snackB">Wednesdae</br>Drummond</span></td>
+							<td><span class="snackA">10F</span></br>
+									<span class="snackB">Riven</br>Fowley</span></td>
+							<td><span class="snackA">10M</span></br>
+									<span class="snackB">Rodrick</br>Benstaloe</span></td>
+							<td><span class="snackA">11F</span></br>
+									<span class="snackB">Salome</br>Izar</span></td>
+							<td><span class="snackA">11M</span></br>
+									<span class="snackB">Iago</br>Izar-McClaine</span></td>
+							<td><span class="snackA">12F</span></br>
+									<span class="snackB">Charas</br>Harp</span></td>
+							<td><span class="snackA">12M</span></br>
+									<span class="snackB">Asunder</br>Hayes</span></td>
+						</tr>
+					</tbody>
+				</table>
 
+			</div>
+		</div>
 
-			<table class="table table-dark listTable">
+		<div class="container bg-dark" ng-controller="fullScoreController">
+				<table class="table table-dark table-hover listTable">
 				<thead class="thead-dark">
 					<tr>
 						<th scope="col">Rank</th>
@@ -63,7 +165,7 @@
 						<td>{{ t.percentile }}</td>
 						<td>{{ t.name }}</td>
 						<td>{{ t.district | uppercase}}</td>
-						<td>{{ t.gameNum }}</td>
+						<td>{{ t.gameNum | ordinal }}</td>
 						<td>{{ t.member }}</td>
 						<td>{{ t.placement }}</td>
 						<td>{{ t.deathDay }}</td>
@@ -73,15 +175,25 @@
 					</tr>
 				</tbody>
 			</table>
-
 		</div>
+
+		<footer>
+			<p>HUNGERGAMESRPG.COM</P>
+		</footer>
 
 	<!-- Modules -->
 	<script src="js/app.js"></script>
 	<!-- Controllers -->
 	<script src="js/controllers/fullScoreController.js"></script>
+	<script src="js/controllers/snackableController.js"></script>
+
 	<!-- Services -->
+	<script src="js/directives/snackables24.js"></script>
+
 	<!-- Directives -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		
 	</body>
 

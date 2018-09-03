@@ -1,18 +1,25 @@
+body{
+	background-color: #18191c;
+	color: #ddd;
+}
+
 .museum{
 	font-family: 'Lora';
 	margin-bottom: 0px;
 	color: #999;
+	font-size: 1em;
 }
 
 h1{
 	font-family: 'Rubik Mono One';
 	margin: auto;
-	letter-spacing: -2px;
+	font-size: 5em;
 }
 
 h3{
 	margin-top: 0px;
 	font-family: 'Overpass Mono';
+	font-size: 2em;
 }
 
 table{
@@ -32,7 +39,32 @@ table{
 	color: #999;
 }
 
-.module{
-	background-color: #bbb;
-	border-radius: 3px;
+.snack{
+	height: 100px;
+	padding: 0px;
+	text-align: center;
+}
+
+.snackA{
+	height: 50px;
+	font-family: 'Rubik Mono One';
+	font-size: 2em;
+	color: #fff;
+}
+
+.snackB{
+	height: 50px;
+	font-family: 'Overpass Mono';
+	font-size: 1.2em;
+	line-height: 1;
+	font-weight: 500;
+	color: #fff;
+	padding: 2px;
+	top: 20px;
+
+
+}
+
+.container{
+	background-color: #aaa;
 }
