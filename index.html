@@ -74,73 +74,32 @@
 	<body ng-app="zscoreApp">
 		<header class="jumbotron bg-dark">
 			<h4 class="museum">THE NATIONAL HUNGER GAMES MUSEUM PRESENTS:</H4>
-			<h1>VICTORIE</h1>
-			<h3>A 25-Year Retrospective</h3>
+			<h1>DALGAARD</h1>
+			<h3>A System 25 Years in the Making</h3>
 		</header>
-		<div class="container bg-dark" style="text-align: center">
-			<h2>Our Best</h2>
-			<h3>By District</h3>
-				<table class="table snack" style="width:100%;">
-					<tbody>
-						<tr>
-							<td><span class="snackA">1F</span></br>
-									<span class="snackB">Dru</br>Charlesburg</span></td>
-							<td><span class="snackA">1M</span></br>
-									<span class="snackB">Reyes</br>Moreno</span></td>
-							<td><span class="snackA">2F</span></br>
-									<span class="snackB">Circe</br>Lyon</span></td>
-							<td><span class="snackA">2M</span></br>
-									<span class="snackB">Orion</br>Hammerfell</span></td>
-							<td><span class="snackA">3F</span></br>
-									<span class="snackB">Kiena</br>Ward</span></td>
-							<td><span class="snackA">3M</span></br>
-									<span class="snackB">Sawyer</br>Monaghan</span></td>
-							<td><span class="snackA">4F</span></br>
-									<span class="snackB">River</br>Destin</span></td>
-							<td><span class="snackA">4M</span></br>
-									<span class="snackB">Fitz</br>Ripley</span></td>
-						</tr>
-						<tr>
-							<td><span class="snackA">5F</span></br>
-									<span class="snackB">Laila</br>Sycamore</span></td>
-							<td><span class="snackA">5M</span></br>
-									<span class="snackB">Storm</br>Wie</span></td>
-							<td><span class="snackA">6F</span></br>
-									<span class="snackB">Gypsy</br>Keeni</span></td>
-							<td><span class="snackA">6M</span></br>
-									<span class="snackB">Ansel</br>Khiev</span></td>
-							<td><span class="snackA">7F</span></br>
-									<span class="snackB">Yaa</br>Valarro</span></td>
-							<td><span class="snackA">7M</span></br>
-									<span class="snackB">Alexander</br>Hood</span></td>
-							<td><span class="snackA">8F</span></br>
-									<span class="snackB">Aria</br>Wolfe</span></td>
-							<td><span class="snackA">8M</span></br>
-									<span class="snackB">Jared</br>Strahan</span></td>
-						</tr>
-						<tr>
-							<td><span class="snackA">9F</span></br>
-									<span class="snackB">Ivy</br>Soren</span></td>
-							<td><span class="snackA">9M</span></br>
-									<span class="snackB">Wednesdae</br>Drummond</span></td>
-							<td><span class="snackA">10F</span></br>
-									<span class="snackB">Riven</br>Fowley</span></td>
-							<td><span class="snackA">10M</span></br>
-									<span class="snackB">Rodrick</br>Benstaloe</span></td>
-							<td><span class="snackA">11F</span></br>
-									<span class="snackB">Salome</br>Izar</span></td>
-							<td><span class="snackA">11M</span></br>
-									<span class="snackB">Iago</br>Izar-McClaine</span></td>
-							<td><span class="snackA">12F</span></br>
-									<span class="snackB">Charas</br>Harp</span></td>
-							<td><span class="snackA">12M</span></br>
-									<span class="snackB">Asunder</br>Hayes</span></td>
-						</tr>
-					</tbody>
-				</table>
 
-			</div>
+		<div class="container blurb" align="justify">
+			<p>A single Game has infinite complexities: twenty-four personalities crash together, tides against the sand, until only one remains. The arena itself is fraught with the unknown, where an eclipse could give way to a blood moon. Yet there exists patterns in movements, actions, decisions, that only the most discerning can decipher and judge. For the rest of us, contention remains: 
+			<div style="text-align:center">	
+			<p>Who won Panem's favor?</p>
+			<p>Who deserved to, but was left out of the limelight?</p>
+			<p>Whose promises proved underwhelming?</p>
+
+			<p>The answers would be left to churn at dinner parties,</br> cocktail hours, family gatherings. Until now.</p>
 		</div>
+
+			<p>Meet DALGAARD, The Hunger Games Museum's very own Resident Analyst and Ranking System. Our algorithm watched Game after Game, integrating information from each tribute into its very being. DALGAARD understands motivation better than a therapist, and physics as complex as the stars in the skies. It fills in the gaps and knows what makes a fascinating tribute, as well as what causes one to fall into the cracks.</p>
+			<p>DALGAARD uses four key metrics to determine where a tribute's legacy lies:</p>
+			<table class="listing"><tr align="center" style="text-align:center;">
+				<td style="vertical-align:middle">Placement</td>
+				<td style="vertical-align:middle">Death Day</td>
+				<td style="vertical-align:middle">Training Score</td>
+				<td style="vertical-align:middle">Number of Kills</td>
+			</tr></table>
+			<p>From here, we determine a z-score, rank, and percentile for every tribute since the 54th games. Take a look through out dataset and create analyses of your own, or use it to facillitate your tour through the museum! Our master-list can be found below</p>
+			<p>Thank you, may the odds be ever in your favor!</p>
+		</div>
+		
 
 		<div class="container bg-dark" ng-controller="fullScoreController">
 				<table class="table table-dark table-hover listTable">
@@ -178,7 +137,10 @@
 		</div>
 
 		<footer>
-			<p>HUNGERGAMESRPG.COM</P>
+			<div class="bg-dark" style="width:100%;height:70px;margin-top:100px;padding:25px">
+				<p>Brought to you by theNational  Hunger Games Museum</p>
+				<a href="http://hungergamesrpg.com">Hunger Games: The RPG</a>
+			</div>
 		</footer>
 
 	<!-- Modules -->
